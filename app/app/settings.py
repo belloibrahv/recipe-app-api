@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-6r#(w2^23$$0^*k6bdz)te1cfv6s_rh7560e*ptwapmu%-)c4r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,3 +127,7 @@ AUTH_USER_MODEL = 'core.User'
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
